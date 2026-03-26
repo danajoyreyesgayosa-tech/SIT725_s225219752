@@ -16,7 +16,7 @@ nav, .nav-wrapper, .brand-logo, .right {
     padding: 0;
 }
 .materialboxed-image {
-    width: 30%;
+    width: 65%;
     height: auto; /* Maintain aspect ratio */
     display: block;
     margin: 0 auto; /* Center the image */

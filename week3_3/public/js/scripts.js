@@ -1,5 +1,5 @@
 const clickMe = () => {
-    alert("Thanks for clicking me. Hope you have a nice day!")
+    alert("Welcome! 🍽️ Discover delicious recipes—from creamy pasta and fluffy pancakes to rich, flavorful curry—all in one place")
 }
 
 $(document).ready(function(){
