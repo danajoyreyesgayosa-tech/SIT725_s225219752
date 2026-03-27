@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SIT 725 Week 3</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-wrapper navbar-size">
+
+    <!-- ROBOT -->
+    <a href="#" class="brand-logo left">
+      <img class="user-image-size" src="images/robot.png">
+    </a>
+
+    <!-- ABOUT ME -->
+    <ul class="right">
+      <li>
+        <a target="_blank" href="https://nfernando.org/">
+          About Me
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+
+<!-- MAIN -->
+<div class="container center-align">
+
+  <h4>Welcome to SIT 725 Week 3</h4>
+  <p>This is a demo application that tries to use a few components from materialize and through this practical we try to have some fun with Materialize and its components</p>
+
+  <img src="images/livedemo.png" class="materialboxed materialboxed-image responsive-img">
+
+  <br><br>
+
+  <a class="btn modal-trigger" data-target="modal1">Click Me</a>
+
+  <div class="row" id="card-section"></div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+
+    <h5>Login Form</h5>
+
+    <form id="myForm">
+
+      <div class="input-field">
+        <input id="first_name" type="text">
+        <label>First Name</label>
+      </div>
+
+      <div class="input-field">
+        <input id="last_name" type="text">
+        <label>Last Name</label>
+      </div>
+
+      <div class="input-field">
+        <input id="password" type="password">
+        <label>Password</label>
+      </div>
+
+      <div class="input-field">
+        <input id="email" type="email">
+        <label>Email</label>
+      </div>
+
+      <div class="center-align">
+        <button type="submit" class="btn">Submit</button>
+      </div>
+
+    </form>
+
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="js/scripts.js"></script>
+
+</body>
+</html>

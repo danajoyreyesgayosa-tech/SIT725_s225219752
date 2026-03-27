@@ -1,0 +1,29 @@
+.navbar-size {
+  width: 95%;
+  margin: auto;
+}
+
+.user-image-size {
+  height: 60px;
+}
+
+.materialboxed-image {
+  width: 50%;
+  margin: auto;
+  display: block;
+}
+
+h4 {
+  font-weight: 900;
+  margin-top: 30px;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 800px;
+  margin: 10px auto;
+  line-height: 1.6;
+}
