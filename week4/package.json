@@ -1,0 +1,13 @@
+{
+  "name": "skillhub-app",
+  "version": "1.0.0",
+  "description": "SIT725 Week 4 Database App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.0.0"
+  }
+}
