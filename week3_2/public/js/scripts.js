@@ -1,5 +1,5 @@
 const clickMe = () => {
-    alert("Thanks for clicking me. Hope you have a nice day!")
+    alert("Welcome to this page! Have a good day!")
 }
 
 $(document).ready(function(){
