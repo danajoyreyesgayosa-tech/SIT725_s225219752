@@ -1,6 +1,6 @@
-var express = require("express");
-var app = express();
-var port = 3004;
+const express = require("express");
+const app = express();
+const port = 3004;
 const mongoose = require("mongoose");
 
 // Middleware
