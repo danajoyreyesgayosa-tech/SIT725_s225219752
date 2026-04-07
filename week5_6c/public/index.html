@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Books Catalogue</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    #booksDisplay {
+      max-width: 600px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Books Catalogue developed by S225219752</h1>
+
+  <button id="fetchBooksBtn">Get All Books</button>
+
+  <div id="booksDisplay"></div>
+
+  <script>
+    const btn = document.getElementById('fetchBooksBtn');
+    const out = document.getElementById('booksDisplay');
+
+    // FETCH BOOKS
+    btn.addEventListener('click', async () => {
+      out.textContent = 'Loading...';
+
+      try {
+        const res = await fetch('/api/books');
+
+        if (!res.ok) {
+          throw new Error('HTTP error ' + res.status);
+        }
+
+        const data = await res.json();
+        render(data.data);
+
+      } catch (err) {
+        console.error(err);
+        out.textContent = 'Error fetching books';
+      }
+    });
+
+    // RENDER FUNCTION (CLICKABLE BOOKS)
+    function render(items) {
+      out.innerHTML = '';
+
+      if (!items || items.length === 0) {
+        out.textContent = 'No books found';
+        return;
+      }
+
+      items.forEach(b => {
+        const div = document.createElement('div');
+        div.style.marginBottom = "10px";
+
+        // Title + price (clickable)
+        const titleLine = document.createElement('div');
+        titleLine.textContent = `${b.title} $${b.price} AUD`;
+        titleLine.style.cursor = "pointer";
+        titleLine.style.padding = "10px";
+        titleLine.style.border = "1px solid #ddd";
+        titleLine.style.background = "#f5f5f5";
+        titleLine.style.fontWeight = "bold";
+
+        // Hidden details
+        const details = document.createElement('div');
+        details.style.display = "none";
+        details.style.padding = "10px";
+        details.style.border = "1px solid #ddd";
+        details.style.borderTop = "none";
+        details.style.background = "#fff";
+
+        details.innerHTML = `
+          <div><b>Author:</b> ${b.author}</div>
+          <div><b>Year:</b> ${b.year}</div>
+          <div><b>Genre:</b> ${b.genre}</div>
+          <div><b>Summary:</b> ${b.summary}</div>
+          <div><b>Price:</b> $${b.price}</div>
+        `;
+
+        // Toggle on click
+        titleLine.addEventListener('click', () => {
+          details.style.display =
+            details.style.display === "none" ? "block" : "none";
+        });
+
+        div.appendChild(titleLine);
+        div.appendChild(details);
+        out.appendChild(div);
+      });
+    }
+  </script>
+</body>
+</html>
