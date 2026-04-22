@@ -19,6 +19,7 @@ const seedBooks = [
     year: 1847,
     genre: "Classic",
     summary: "An orphaned governess confronts class, morality, and love at Thornfield Hall, uncovering Mr. Rochester’s secret and forging her own independence.",
+    price: 22
   },
   {
     title: "Pride and Prejudice",
