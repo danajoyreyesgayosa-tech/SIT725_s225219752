@@ -6,7 +6,7 @@ async function getAllBooks() {
 }
 
 async function getBookById(id) {
-  return await Book.findOne({ id });
+  return await Book.findById(id);
 }
 
 module.exports = {

@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const path = require('path');
 
 const bookRoutes = require('./routes/book.routes');
-console.log(bookRoutes);
 
 const app = express();
 const PORT = 3000;
