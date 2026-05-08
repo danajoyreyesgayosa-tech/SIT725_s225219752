@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-Time Chat App</title>
+</head>
+<body>
+
+<h2>💬 Real-Time Chat</h2>
+
+<ul id="messages"></ul>
+
+<input id="username" placeholder="Enter your name" />
+<br><br>
+
+<input id="messageInput" placeholder="Type a message..." />
+<button onclick="sendMessage()">Send</button>
+
+<!-- Load socket.io FIRST -->
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
